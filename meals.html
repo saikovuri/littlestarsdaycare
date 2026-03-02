@@ -15,7 +15,7 @@
 
 <header>
   <div class="header-inner">
-    <h1><img src="littlestarslogo.png" alt="Little Stars Logo" class="logo-img"> Little Stars Home Daycare</h1>
+    <h1><a href="index.html"><img src="littlestarslogo.png" alt="Little Stars Logo" class="logo-img"> Little Stars Home Daycare</a></h1>
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav').classList.toggle('active')">
       <span></span><span></span><span></span>
     </button>
@@ -24,16 +24,16 @@
       <a href="about.html">About Us</a>
       <a href="schedule.html">Schedule</a>
       <a href="meals.html" class="active">Meals &amp; Snacks</a>
-      <a href="springbreak.html">Spring Break</a>
+      <a href="springcamp.html">Spring Camp</a>
       <a href="enrollment.html">Enrollment</a>
       <a href="contact.html">Contact</a>
       <div class="nav-dropdown">
         <button class="dropdown-toggle">More <span class="dropdown-arrow">&#9662;</span></button>
-        <div class="dropdown-menu">
+        <div class="dropdown-menu"><div class="dropdown-menu-inner">
           <a href="gallery.html">Gallery</a>
           <a href="faq.html">FAQ</a>
           <a href="policies.html">Policies</a>
-        </div>
+        </div></div>
       </div>
     </nav>
   </div>
@@ -55,13 +55,54 @@
     <div class="meal-card animate-in">
       <span class="meal-icon">🥞</span>
       <h3>Breakfast</h3>
-      <p>Whole-grain pancakes, oatmeal, fresh fruit, scrambled eggs, yogurt parfaits, and cereal options.</p>
+      <p>A wholesome, home-cooked breakfast served every morning — featuring healthy grains, proteins, and steamed veggies.</p>
     </div>
     <div class="meal-card animate-in">
       <span class="meal-icon">🍪</span>
       <h3>PM Snack</h3>
-      <p>Granola bars, apple slices with peanut butter, cheese &amp; crackers, trail mix, and homemade muffins.</p>
+      <p>Fresh fruits and healthy bites each afternoon — seasonal fruits, Greek yogurt, and naturally sweet options.</p>
     </div>
+  </div>
+
+  <div class="section" style="margin-top: 40px;">
+    <h2>📋 Weekly Menu <span style="font-size: 0.55em; font-weight: 400; color: var(--text-light);">January – December 2026</span></h2>
+  </div>
+
+  <div class="menu-table-wrapper">
+    <table class="menu-table">
+      <thead>
+        <tr>
+          <th>Meal</th>
+          <th>🌙 Monday</th>
+          <th>🌙 Tuesday</th>
+          <th>🌙 Wednesday</th>
+          <th>🌙 Thursday</th>
+          <th>🌙 Friday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="meal-label">🥞 Breakfast</td>
+          <td>Ragi Idly<br>Boiled Egg<br>Steamed Carrot</td>
+          <td>Quinoa Oats<br>Scrambled Egg<br>Steamed Broccoli</td>
+          <td>Rice Dal Pongal<br>Boiled Egg<br>Steamed Spinach</td>
+          <td>Quinoa Idly<br>Zucchini (Steamed)</td>
+          <td>Soft Rice Idly<br>Steamed Veggies</td>
+        </tr>
+        <tr class="lunch-row">
+          <td class="meal-label">🍱 Lunch</td>
+          <td colspan="5">Packed lunch provided by parents</td>
+        </tr>
+        <tr>
+          <td class="meal-label">🍎 PM Snack</td>
+          <td>Banana<br>Pear Slices</td>
+          <td>Greek Yogurt<br>Strawberries</td>
+          <td>Apple Slices<br>Cucumber</td>
+          <td>Orange Slices<br>Blueberries</td>
+          <td>Greek Yogurt<br>Berries</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <div class="highlight-box" style="margin-top: 40px;">
@@ -99,6 +140,7 @@
       <a href="about.html">About</a>
       <a href="schedule.html">Schedule</a>
       <a href="meals.html">Meals</a>
+      <a href="springcamp.html">Spring Camp</a>
       <a href="enrollment.html">Enroll</a>
       <a href="faq.html">FAQ</a>
       <a href="policies.html">Policies</a>

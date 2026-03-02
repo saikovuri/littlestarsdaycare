@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Spring Camp at Little Stars Home Daycare — fun-filled themed activities, crafts, and outdoor play for ages 18 months+.">
+  <title>Spring Camp - Little Stars Home Daycare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="littlestarslogo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <h1><a href="index.html"><img src="littlestarslogo.png" alt="Little Stars Logo" class="logo-img"> Little Stars Home Daycare</a></h1>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav').classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="meals.html">Meals &amp; Snacks</a>
+      <a href="springcamp.html" class="active">Spring Camp</a>
+      <a href="enrollment.html">Enrollment</a>
+      <a href="contact.html">Contact</a>
+      <div class="nav-dropdown">
+        <button class="dropdown-toggle">More <span class="dropdown-arrow">&#9662;</span></button>
+        <div class="dropdown-menu"><div class="dropdown-menu-inner">
+          <a href="gallery.html">Gallery</a>
+          <a href="faq.html">FAQ</a>
+          <a href="policies.html">Policies</a>
+        </div></div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="page-banner">
+  <span class="banner-icon">🌸</span>
+  <h2>Spring Camp 2026</h2>
+  <p>A week of themed adventures, creativity, and fun for kids ages 18 months and up!</p>
+</div>
+
+<div class="container">
+  <div class="highlight-box">
+    <h3>📅 Spring Camp Week &nbsp;|&nbsp; Ages 18 months+</h3>
+    <p>Join us for a fun-filled Spring Camp! Each day has a unique theme packed with crafts, outdoor play, sensory activities, music, and hands-on learning.</p>
+  </div>
+
+  <!-- ===== Daily Themes ===== -->
+  <div class="section" style="margin-top: 40px;">
+    <h2>🎯 This Week's Themes</h2>
+    <p>Five exciting themed days to keep campers engaged, curious, and having a blast!</p>
+  </div>
+
+  <div class="camp-themes">
+    <div class="camp-theme-card animate-in" style="--accent: #4caf50;">
+      <span class="theme-day">Monday</span>
+      <span class="theme-icon">🌿</span>
+      <h3>Nature Day</h3>
+      <p>Spring collages, nature art, sensory bins &amp; weather songs</p>
+    </div>
+    <div class="camp-theme-card animate-in" style="--accent: #e91e63;">
+      <span class="theme-day">Tuesday</span>
+      <span class="theme-icon">🌈</span>
+      <h3>Colors Day</h3>
+      <p>Color sorting, sponge painting, rainbow crafts &amp; matching games</p>
+    </div>
+    <div class="camp-theme-card animate-in" style="--accent: #ff9800;">
+      <span class="theme-day">Wednesday</span>
+      <span class="theme-icon">🤸</span>
+      <h3>All Kinds of Play</h3>
+      <p>Indoor &amp; outdoor free play, blocks, cars, fine motor toys &amp; dance</p>
+    </div>
+    <div class="camp-theme-card animate-in" style="--accent: #8bc34a;">
+      <span class="theme-day">Thursday</span>
+      <span class="theme-icon">🐞</span>
+      <h3>Bugs &amp; Garden</h3>
+      <p>Ladybug crafts, insect toys, sensory bins &amp; pretend gardening</p>
+    </div>
+    <div class="camp-theme-card animate-in" style="--accent: #9c27b0;">
+      <span class="theme-day">Friday</span>
+      <span class="theme-icon">🎉</span>
+      <h3>Fun Party Day</h3>
+      <p>Water play, dance party, free-choice centers &amp; celebration!</p>
+    </div>
+  </div>
+
+  <!-- ===== Full Camp Schedule Table ===== -->
+  <div class="section" style="margin-top: 50px;">
+    <h2>📋 Full Camp Schedule</h2>
+    <p>Here's what a typical camp day looks like — every day follows the same flow, with activities matching the daily theme.</p>
+  </div>
+
+  <div class="menu-table-wrapper">
+    <table class="menu-table camp-schedule-table">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>🌿 Mon</th>
+          <th>🌈 Tue</th>
+          <th>🤸 Wed</th>
+          <th>🐞 Thu</th>
+          <th>🎉 Fri</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-arrival">
+          <td class="meal-label">8:30–9:00</td>
+          <td colspan="5">🌅 Arrival &amp; Free Play</td>
+        </tr>
+        <tr class="row-breakfast">
+          <td class="meal-label">9:00–9:30</td>
+          <td colspan="5">🍽️ Breakfast / Snack</td>
+        </tr>
+        <tr>
+          <td class="meal-label">9:30–10:00</td>
+          <td>📖 Circle Time<br><em>Spring &amp; Weather</em></td>
+          <td>📖 Circle Time<br><em>Colors</em></td>
+          <td>📖 Circle Time<br><em>Action &amp; Dance</em></td>
+          <td>📖 Circle Time<br><em>Bugs Theme</em></td>
+          <td>📖 Circle Time<br><em>Dance</em></td>
+        </tr>
+        <tr>
+          <td class="meal-label">10:00–10:40</td>
+          <td>🧩 Sensory Bin, Puzzles, Coloring, Blocks</td>
+          <td>🧩 Color Sorting, Playdough, Matching</td>
+          <td>🧩 Blocks, Cars, Fine Motor Toys, Puzzles</td>
+          <td>🧩 Insect Toys, Sensory Bin, Books</td>
+          <td>🧩 Free Choice Centers</td>
+        </tr>
+        <tr class="row-outdoor">
+          <td class="meal-label">10:40–11:30</td>
+          <td colspan="5">🌳 Outdoor Play</td>
+        </tr>
+        <tr class="row-lunch">
+          <td class="meal-label">11:30–12:30</td>
+          <td colspan="5">🍱 Lunch Time <em>(packed by parents)</em></td>
+        </tr>
+        <tr class="row-nap">
+          <td class="meal-label">12:30–2:00</td>
+          <td colspan="5">😴 Nap / Quiet Time</td>
+        </tr>
+        <tr class="row-snack">
+          <td class="meal-label">2:00–2:30</td>
+          <td colspan="5">🧼 Restroom &amp; 🍪 PM Snack</td>
+        </tr>
+        <tr class="row-craft">
+          <td class="meal-label">2:30–3:30</td>
+          <td>🎨 Spring Collage Craft &amp; Nature Art</td>
+          <td>🎨 Sponge Painting &amp; Rainbow Craft</td>
+          <td>🤸 Indoor/Outdoor Free Play Activities</td>
+          <td>🐞 Ladybug Craft &amp; Pretend Gardening</td>
+          <td>💧 Water Play &amp; Dance Party</td>
+        </tr>
+        <tr class="row-freeplay">
+          <td class="meal-label">3:30–4:30</td>
+          <td colspan="5">🏠 Free Play (Indoor/Outdoor)</td>
+        </tr>
+        <tr class="row-story">
+          <td class="meal-label">4:30–5:00</td>
+          <td>📚 Story Time &amp; Calm Activities</td>
+          <td>📚 Story Time &amp; Puzzles</td>
+          <td>📚 Story Time &amp; Music</td>
+          <td>📚 Story Time &amp; Books</td>
+          <td>📚 Story Time &amp; Dance</td>
+        </tr>
+        <tr class="row-pickup">
+          <td class="meal-label">5:00–5:30</td>
+          <td colspan="5">👋 Pick-Up &amp; Quiet Play</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ===== What's Included ===== -->
+  <div class="section" style="margin-top: 40px;">
+    <h2>What's Included</h2>
+    <div class="card-grid">
+      <div class="card animate-in">
+        <span class="card-icon">🍎</span>
+        <h3>Breakfast &amp; PM Snack</h3>
+        <p>A healthy breakfast and afternoon snack provided daily. Please send a packed lunch from home.</p>
+      </div>
+      <div class="card animate-in">
+        <span class="card-icon">🎒</span>
+        <h3>All Materials Included</h3>
+        <p>We supply all craft supplies, sensory materials, games, and activity supplies — just bring your child ready for fun!</p>
+      </div>
+      <div class="card animate-in">
+        <span class="card-icon">👩‍👧‍👦</span>
+        <h3>Small Group Attention</h3>
+        <p>Limited spots ensure personalized care and a safe, engaging camp experience for every child.</p>
+      </div>
+      <div class="card animate-in">
+        <span class="card-icon">🌦️</span>
+        <h3>Rain or Shine</h3>
+        <p>Outdoor activities are weather permitting. In case of bad weather, we have fun indoor alternatives ready!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="highlight-box" style="margin-top: 40px;">
+    <h3>Limited Spots Available! 🌟</h3>
+    <p>Don't miss out on an amazing spring camp experience. Contact us today to reserve your child's place!</p>
+    <a href="contact.html" class="btn btn-primary" style="margin-top: 16px;">Reserve a Spot</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-info">📞 512-850-0076 &nbsp;|&nbsp; 🕐 Mon–Fri 8:30 AM – 5:30 PM</div>
+    <div class="footer-brand"><img src="littlestarslogo.png" alt="Little Stars Logo" class="logo-img">Little Stars Home Daycare</div>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="meals.html">Meals</a>
+      <a href="springcamp.html">Spring Camp</a>
+      <a href="enrollment.html">Enroll</a>
+      <a href="faq.html">FAQ</a>
+      <a href="policies.html">Policies</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Little Stars Home Daycare &middot; Hutto, TX</div>
+  </div>
+</footer>
+
+</body>
+</html>

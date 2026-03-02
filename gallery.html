@@ -15,7 +15,7 @@
 
 <header>
   <div class="header-inner">
-    <h1><img src="littlestarslogo.png" alt="Little Stars Logo" class="logo-img"> Little Stars Home Daycare</h1>
+    <h1><a href="index.html"><img src="littlestarslogo.png" alt="Little Stars Logo" class="logo-img"> Little Stars Home Daycare</a></h1>
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav').classList.toggle('active')">
       <span></span><span></span><span></span>
     </button>
@@ -24,16 +24,16 @@
       <a href="about.html">About Us</a>
       <a href="schedule.html">Schedule</a>
       <a href="meals.html">Meals &amp; Snacks</a>
-      <a href="springbreak.html">Spring Break</a>
+      <a href="springcamp.html">Spring Camp</a>
       <a href="enrollment.html">Enrollment</a>
       <a href="contact.html">Contact</a>
       <div class="nav-dropdown">
         <button class="dropdown-toggle has-active">More <span class="dropdown-arrow">&#9662;</span></button>
-        <div class="dropdown-menu">
+        <div class="dropdown-menu"><div class="dropdown-menu-inner">
           <a href="gallery.html" class="active">Gallery</a>
           <a href="faq.html">FAQ</a>
           <a href="policies.html">Policies</a>
-        </div>
+        </div></div>
       </div>
     </nav>
   </div>
@@ -51,8 +51,28 @@
   </div>
 
   <div class="gallery-grid">
-    <!-- Replace these placeholder images with your actual photos -->
-    <!-- Just add your images to the same folder and update the src and alt text -->
+    <div class="gallery-item animate-in">
+      <img src="images/circletime.jpg" alt="Circle time activities with kids">
+      <div class="gallery-caption">Circle Time</div>
+    </div>
+    <div class="gallery-item animate-in">
+      <img src="images/learn1.jpg" alt="Our learning area setup">
+      <div class="gallery-caption">Learning Area</div>
+    </div>
+    <div class="gallery-item animate-in">
+      <img src="images/learn2.jpg" alt="Another view of our learning space">
+      <div class="gallery-caption">Learning Area — Another View</div>
+    </div>
+    <div class="gallery-item animate-in">
+      <img src="images/play1.jpg" alt="Kids play area">
+      <div class="gallery-caption">Play Time</div>
+    </div>
+    <div class="gallery-item animate-in">
+      <img src="images/play2.jpg" alt="Another view of the play area">
+      <div class="gallery-caption">Play Time — Another View</div>
+    </div>
+
+    <!-- Uncomment these once you have the photos ready:
     <div class="gallery-item animate-in">
       <img src="classroom.jpg" alt="Our bright and welcoming classroom space">
       <div class="gallery-caption">Our Classroom</div>
@@ -70,13 +90,14 @@
       <div class="gallery-caption">Storytime</div>
     </div>
     <div class="gallery-item animate-in">
-      <img src="gallery-meals.jpg" alt="Children enjoying a healthy lunch">
+      <img src="gallery-meals.jpg" alt="Children enjoying a healthy snack">
       <div class="gallery-caption">Snack Time</div>
     </div>
     <div class="gallery-item animate-in">
       <img src="gallery-learning.jpg" alt="Learning letters and numbers">
       <div class="gallery-caption">Learning Activities</div>
     </div>
+    -->
   </div>
 
   <div class="highlight-box" style="margin-top: 50px;">
@@ -94,6 +115,7 @@
       <a href="about.html">About</a>
       <a href="schedule.html">Schedule</a>
       <a href="meals.html">Meals</a>
+      <a href="springcamp.html">Spring Camp</a>
       <a href="enrollment.html">Enroll</a>
       <a href="faq.html">FAQ</a>
       <a href="policies.html">Policies</a>
