@@ -49,6 +49,35 @@ header {
   box-shadow: 0 2px 20px rgba(0,0,0,0.1);
 }
 
+/* ===== Announcement Banner ===== */
+.announcement-banner {
+  background: linear-gradient(135deg, #7c5cbf 0%, #9575cd 50%, #b39ddb 100%);
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  animation: bannerPulse 3s ease-in-out infinite;
+}
+
+.announcement-banner a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.3s;
+}
+
+.announcement-banner a:hover {
+  opacity: 0.85;
+}
+
+@keyframes bannerPulse {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -899,6 +928,85 @@ nav a.active {
 .highlight-box p {
   font-size: 1.05rem;
   color: #6a6a7a;
+}
+
+/* ===== Auto-Scrolling Carousel ===== */
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 16px;
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  animation: carouselScroll 30s linear infinite;
+  width: max-content;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.carousel-slide {
+  flex-shrink: 0;
+  width: 280px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: transform 0.3s ease;
+}
+
+.carousel-slide:hover {
+  transform: scale(1.03);
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-caption {
+  padding: 10px 14px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #5c5470;
+  text-align: center;
+  background: #fff;
+}
+
+@keyframes carouselScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-slide {
+    width: 220px;
+  }
+  .carousel-slide img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-slide {
+    width: 180px;
+  }
+  .carousel-slide img {
+    height: 130px;
+  }
 }
 
 /* ===== Footer ===== */
