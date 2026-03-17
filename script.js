@@ -27,3 +27,42 @@ window.addEventListener('scroll', function () {
     nav.classList.remove('active');
   }
 });
+
+// ===== Schedule Tabs with URL hash =====
+(function () {
+  var tabs = document.querySelectorAll('.schedule-tab');
+  var panels = document.querySelectorAll('.tab-panel');
+  if (!tabs.length) return;
+
+  function switchTab(tabName) {
+    tabs.forEach(function (t) {
+      t.classList.toggle('active', t.getAttribute('data-tab') === tabName);
+    });
+    panels.forEach(function (p) {
+      p.classList.toggle('active', p.id === tabName);
+    });
+  }
+
+  // Click handler
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var tabName = this.getAttribute('data-tab');
+      switchTab(tabName);
+      history.replaceState(null, '', '#' + tabName);
+    });
+  });
+
+  // Load from URL hash on page load
+  var hash = window.location.hash.replace('#', '');
+  if (hash === 'fullday' || hash === 'halfday') {
+    switchTab(hash);
+  }
+
+  // Handle back/forward navigation
+  window.addEventListener('hashchange', function () {
+    var hash = window.location.hash.replace('#', '');
+    if (hash === 'fullday' || hash === 'halfday') {
+      switchTab(hash);
+    }
+  });
+})();

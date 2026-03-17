@@ -926,6 +926,296 @@ nav a.active {
   color: #7a7a8a;
 }
 
+/* ===== Provider Card ===== */
+
+/* Why Choose Grid */
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.why-choose-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 20px 22px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 3px 14px rgba(92, 84, 112, 0.07);
+  border: 1px solid rgba(92, 84, 112, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.why-choose-item:hover {
+  transform: translateY(-3px);
+}
+
+.why-choose-item span:first-child {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.why-choose-item p {
+  font-size: 0.92rem;
+  color: #4a4a5a;
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+  }
+  .why-choose-item {
+    padding: 16px 18px;
+  }
+}
+
+/* Provider Card */
+.provider-card {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: 0 6px 30px rgba(92, 84, 112, 0.1);
+  border: 1px solid rgba(92, 84, 112, 0.06);
+  margin-bottom: 40px;
+}
+
+.provider-photo {
+  flex-shrink: 0;
+}
+
+.provider-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #e1bee7;
+  box-shadow: 0 4px 20px rgba(149, 117, 205, 0.2);
+}
+
+.provider-info h2 {
+  font-size: 1.5rem;
+  color: #5c5470;
+  margin-bottom: 4px;
+}
+
+.provider-info .provider-title {
+  font-weight: 700;
+  color: #9575cd;
+  font-size: 1rem;
+  margin-bottom: 14px;
+  letter-spacing: 0.3px;
+}
+
+.provider-info p {
+  font-size: 0.95rem;
+  color: #4a4a5a;
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 768px) {
+  .provider-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 20px;
+    gap: 20px;
+  }
+  .provider-photo img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* ===== Schedule Tabs ===== */
+.schedule-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.schedule-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 32px;
+  border-radius: 14px;
+  font-family: 'Nunito', 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #5c5470;
+  background: #fff;
+  border: 2px solid #e0dce8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(92, 84, 112, 0.06);
+}
+
+.schedule-tab:hover {
+  border-color: #9575cd;
+  background: #faf8ff;
+}
+
+.schedule-tab.active {
+  background: linear-gradient(135deg, #7c5cbf, #9575cd);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 18px rgba(124, 92, 191, 0.3);
+}
+
+.tab-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  opacity: 0.8;
+  letter-spacing: 0.3px;
+}
+
+.schedule-tab.active .tab-badge {
+  opacity: 0.9;
+}
+
+/* Tab Panels */
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+  animation: tabFadeIn 0.4s ease;
+}
+
+@keyframes tabFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+  .schedule-tabs {
+    gap: 8px;
+  }
+  .schedule-tab {
+    padding: 12px 20px;
+    font-size: 0.92rem;
+    flex: 1;
+    min-width: 0;
+  }
+  .tab-badge {
+    font-size: 0.65rem;
+  }
+}
+
+/* ===== Half-Day Program Cards ===== */
+.halfday-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 10px;
+}
+
+.halfday-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 0;
+  box-shadow: 0 4px 22px rgba(92, 84, 112, 0.1);
+  border: 1px solid rgba(92, 84, 112, 0.06);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.halfday-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 35px rgba(92, 84, 112, 0.16);
+}
+
+.halfday-header {
+  text-align: center;
+  padding: 28px 20px 20px;
+  color: #fff;
+  position: relative;
+}
+
+.halfday-morning .halfday-header {
+  background: linear-gradient(135deg, #f9a825, #ffb74d);
+}
+
+.halfday-afternoon .halfday-header {
+  background: linear-gradient(135deg, #7c5cbf, #9575cd);
+}
+
+.halfday-icon {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.halfday-header h3 {
+  color: #fff;
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+}
+
+.halfday-time {
+  font-size: 1rem;
+  font-weight: 700;
+  opacity: 0.95;
+  letter-spacing: 0.5px;
+}
+
+.halfday-list {
+  list-style: none;
+  padding: 20px 24px;
+  margin: 0;
+}
+
+.halfday-list li {
+  padding: 9px 0;
+  border-bottom: 1px solid #f0eef5;
+  font-size: 0.92rem;
+  color: #4a4a5a;
+  line-height: 1.5;
+}
+
+.halfday-list li:last-child {
+  border-bottom: none;
+}
+
+.halfday-includes {
+  padding: 14px 24px;
+  background: #faf8ff;
+  font-size: 0.85rem;
+  color: #5c5470;
+  border-top: 1px solid #f0eef5;
+}
+
+@media (max-width: 768px) {
+  .halfday-grid {
+    grid-template-columns: 1fr;
+  }
+  .halfday-header {
+    padding: 22px 16px 16px;
+  }
+  .halfday-list {
+    padding: 16px 18px;
+  }
+  .halfday-list li {
+    font-size: 0.88rem;
+  }
+  .halfday-includes {
+    padding: 12px 18px;
+    font-size: 0.82rem;
+  }
+}
+
 /* ===== Text Highlights ===== */
 .highlight-box {
   background: linear-gradient(135deg, #fce4ec, #f3e5f5);
@@ -1551,5 +1841,215 @@ footer {
 @media (max-width: 480px) {
   .footer-inner .footer-info {
     font-size: 0.75rem;
+  }
+}
+
+/* ===== Color-Coded Timeline Items ===== */
+.timeline-item.tl-meal    { border-left: 4px solid #ef9a5e; background: #fff8f2; }
+.timeline-item.tl-learn   { border-left: 4px solid #64b5f6; background: #f0f7ff; }
+.timeline-item.tl-outdoor { border-left: 4px solid #66bb6a; background: #f2faf3; }
+.timeline-item.tl-hygiene { border-left: 4px solid #b0aab8; background: #f9f8fb; }
+.timeline-item.tl-rest    { border-left: 4px solid #ba8fdb; background: #f9f3ff; }
+.timeline-item.tl-creative{ border-left: 4px solid #f06292; background: #fff2f6; }
+.timeline-item.tl-play    { border-left: 4px solid #4dd0e1; background: #f0fbfc; }
+.timeline-item.tl-pickup  { border-left: 4px solid #ffb74d; background: #fffaf3; }
+
+/* ===== Day at a Glance Bar ===== */
+.day-glance {
+  margin-bottom: 36px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 3px 15px rgba(92, 84, 112, 0.07);
+}
+
+.day-glance-title {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #5c5470;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.day-glance-bar {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 36px;
+}
+
+.glance-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.glance-meal    { background: #ef9a5e; }
+.glance-learn   { background: #64b5f6; }
+.glance-outdoor { background: #66bb6a; }
+.glance-rest    { background: #ba8fdb; }
+.glance-creative{ background: #f06292; }
+.glance-play    { background: #4dd0e1; }
+.glance-pickup  { background: #ffb74d; }
+
+.glance-times {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  padding: 0 2px;
+  font-size: 0.72rem;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .day-glance {
+    padding: 16px;
+  }
+  .day-glance-bar {
+    height: 28px;
+  }
+  .glance-block {
+    font-size: 0px;
+  }
+  .glance-times {
+    font-size: 0.65rem;
+  }
+}
+
+/* ===== Print Styles ===== */
+@media print {
+  header, footer, .schedule-tabs, .btn,
+  .page-banner, .announcement-bar, nav {
+    display: none !important;
+  }
+
+  /* Only show the active tab */
+  .tab-panel {
+    display: none !important;
+  }
+  .tab-panel.active {
+    display: block !important;
+    animation: none !important;
+  }
+
+  .container {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .section {
+    padding: 10px 0;
+  }
+  .section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+  }
+  .section p {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+  }
+
+  /* Compact timeline */
+  .timeline {
+    margin-top: 10px;
+    padding-left: 28px;
+  }
+  .timeline::before {
+    left: 8px;
+    width: 2px;
+  }
+  .timeline-item {
+    break-inside: avoid;
+    box-shadow: none;
+    margin-bottom: 6px;
+    padding: 8px 14px;
+    border-radius: 8px;
+  }
+  .timeline-item::before {
+    width: 10px;
+    height: 10px;
+    left: -24px;
+    top: 14px;
+  }
+  .timeline-item .time {
+    font-size: 0.8rem;
+    margin-bottom: 1px;
+  }
+  .timeline-item .activity {
+    font-size: 0.82rem;
+    line-height: 1.35;
+  }
+
+  /* Compact day at a glance */
+  .day-glance {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+  .day-glance-bar {
+    height: 24px;
+  }
+  .glance-block {
+    font-size: 0;
+  }
+
+  /* Compact highlight box */
+  .highlight-box {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    padding: 14px;
+    margin-top: 14px !important;
+  }
+  .highlight-box h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+  .highlight-box p {
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+
+  /* Compact half-day cards */
+  .halfday-grid {
+    gap: 12px;
+  }
+  .halfday-card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+  .halfday-header {
+    padding: 12px 14px 10px;
+  }
+  .halfday-icon {
+    font-size: 1.4rem;
+    margin-bottom: 2px;
+  }
+  .halfday-header h3 {
+    font-size: 1rem;
+  }
+  .halfday-list {
+    padding: 10px 14px;
+  }
+  .halfday-list li {
+    padding: 4px 0;
+    font-size: 0.82rem;
+  }
+  .halfday-includes {
+    padding: 8px 14px;
+    font-size: 0.78rem;
+  }
+
+  body {
+    font-size: 11pt;
   }
 }
