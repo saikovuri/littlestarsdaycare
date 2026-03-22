@@ -1321,17 +1321,170 @@ nav a.active {
 }
 
 @media (max-width: 768px) {
-  .schedule-age-table {
-    font-size: 0.82rem;
-    min-width: 650px;
+  /* ---- Transform table rows into stacked cards on mobile ---- */
+  .schedule-table-wrapper {
+    box-shadow: none;
+    border-radius: 0;
   }
-  .schedule-age-table thead th {
-    padding: 12px 10px;
+
+  .schedule-table-scroll {
+    max-height: none;
+    overflow-y: visible;
+    border-radius: 0;
+  }
+
+  .schedule-age-table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  .schedule-age-table thead {
+    display: none; /* hide column headers, labels are on each card */
+  }
+
+  .schedule-age-table tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .schedule-age-table tbody tr {
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff !important;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(92, 84, 112, 0.08);
+    padding: 0;
+    overflow: hidden;
+    border-left: 5px solid #ccc;
+  }
+
+  /* Preserve row color-coding on mobile */
+  .schedule-age-table tr.row-play   { border-left-color: #26a69a; }
+  .schedule-age-table tr.row-learn  { border-left-color: #5c6bc0; }
+  .schedule-age-table tr.row-meal   { border-left-color: #ff8a65; }
+  .schedule-age-table tr.row-outdoor{ border-left-color: #66bb6a; }
+  .schedule-age-table tr.row-hygiene{ border-left-color: #b0b0b0; }
+  .schedule-age-table tr.row-rest   { border-left-color: #9575cd; }
+  .schedule-age-table tr.row-creative{ border-left-color: #f06292; }
+  .schedule-age-table tr.row-pickup { border-left-color: #ffa726; }
+
+  .schedule-age-table tr.row-pickup {
+    background: linear-gradient(90deg, #fff8e1 0%, #fff3cd 100%) !important;
+  }
+
+  .schedule-age-table tr.row-rest {
+    background: #f5f0ff !important;
+  }
+
+  .schedule-age-table tbody tr td {
+    display: block;
+    border: none;
+    padding: 0;
+    text-align: left;
+    font-size: 0.85rem;
+  }
+
+  /* Time — top-left of a mini header bar */
+  .schedule-age-table td.td-time {
+    flex: 0 0 100%;
+    background: linear-gradient(135deg, #f5f0ff 0%, #eee8f7 100%);
+    padding: 10px 14px 4px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #7c5cbf;
+    border-bottom: none;
+    white-space: normal;
+  }
+
+  /* Activity — directly below time */
+  .schedule-age-table td.td-activity {
+    flex: 0 0 100%;
+    background: linear-gradient(135deg, #f5f0ff 0%, #eee8f7 100%);
+    padding: 0 14px 10px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #3a3a4a;
+    white-space: normal;
+    border-bottom: 1px solid #e8e0f0;
+  }
+
+  /* Age group cells — displayed as labeled rows */
+  .schedule-age-table tbody tr td:nth-child(3),
+  .schedule-age-table tbody tr td:nth-child(4),
+  .schedule-age-table tbody tr td:nth-child(5) {
+    flex: 0 0 100%;
+    padding: 7px 14px;
+    font-size: 0.82rem;
+    color: #4a4a5a;
+    line-height: 1.4;
+    border-bottom: 1px solid #f5f2fa;
+  }
+
+  .schedule-age-table tbody tr td:nth-child(5) {
+    border-bottom: none;
+  }
+
+  /* Add age-group labels via ::before */
+  .schedule-age-table tbody tr td:nth-child(3)::before {
+    content: "👶 14–24 mo — ";
+    font-weight: 600;
+    color: #9575cd;
     font-size: 0.78rem;
   }
-  .schedule-age-table td {
-    padding: 10px;
+
+  .schedule-age-table tbody tr td:nth-child(4)::before {
+    content: "🧒 2–3 yrs — ";
+    font-weight: 600;
+    color: #9575cd;
+    font-size: 0.78rem;
+  }
+
+  .schedule-age-table tbody tr td:nth-child(5)::before {
+    content: "🎒 3+ yrs — ";
+    font-weight: 600;
+    color: #9575cd;
+    font-size: 0.78rem;
+  }
+
+  /* Pickup row: colspan cell — remove labels, center text */
+  .schedule-age-table tr.row-pickup td[colspan] {
+    flex: 0 0 100%;
+    text-align: center;
+    padding: 10px 14px;
+    font-weight: 600;
+    color: #bf6c00;
+    font-size: 0.88rem;
+  }
+
+  .schedule-age-table tr.row-pickup td[colspan]::before {
+    content: none !important;
+  }
+
+  /* Legend: smaller on mobile */
+  .schedule-legend {
+    gap: 6px 12px;
+    padding: 10px 14px;
+  }
+
+  .legend-item {
+    font-size: 0.72rem;
+  }
+
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Includes summary: wrap pills */
+  .table-includes {
+    padding: 12px 14px;
     font-size: 0.8rem;
+  }
+
+  .table-includes .includes-item {
+    font-size: 0.72rem;
+    padding: 2px 8px;
   }
 }
 
