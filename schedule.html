@@ -51,7 +51,19 @@
   <div class="schedule-tabs">
     <button class="schedule-tab active" data-tab="fullday">🕐 Full Day <span class="tab-badge">9 AM – 5 PM</span></button>
     <button class="schedule-tab" data-tab="schoolday">🏫 School Day <span class="tab-badge">9 AM – 3:30 PM</span></button>
-    <button class="schedule-tab" data-tab="halfday">⏳ Half Day <span class="tab-badge">9 AM – 1:15 PM</span></button>
+    <button class="schedule-tab" data-tab="halfday">⏳ Half Day <span class="tab-badge">9 AM – 1:30 PM</span></button>
+  </div>
+
+  <!-- ===== Color Legend ===== -->
+  <div class="schedule-legend">
+    <div class="legend-item"><span class="legend-dot dot-play"></span> Free Play</div>
+    <div class="legend-item"><span class="legend-dot dot-learn"></span> Learning</div>
+    <div class="legend-item"><span class="legend-dot dot-meal"></span> Meals &amp; Snacks</div>
+    <div class="legend-item"><span class="legend-dot dot-outdoor"></span> Outdoor</div>
+    <div class="legend-item"><span class="legend-dot dot-hygiene"></span> Hygiene</div>
+    <div class="legend-item"><span class="legend-dot dot-rest"></span> Rest / Nap</div>
+    <div class="legend-item"><span class="legend-dot dot-creative"></span> Creative</div>
+    <div class="legend-item"><span class="legend-dot dot-pickup"></span> Pick-Up</div>
   </div>
 
   <!-- ===== Full Day Panel ===== -->
@@ -61,88 +73,133 @@
       <p>Each day at Little Stars follows a consistent, age-appropriate routine that gives children security and structure while leaving room for fun and creativity.</p>
     </div>
 
-    <!-- Day at a Glance -->
-    <div class="day-glance">
-      <h3 class="day-glance-title">Day at a Glance</h3>
-      <div class="day-glance-bar">
-        <div class="glance-block glance-play" style="flex:0.5">🏠 Free Play</div>
-        <div class="glance-block glance-learn" style="flex:1">📖 Circle Time</div>
-        <div class="glance-block glance-meal" style="flex:0.8">🍽️ Snack</div>
-        <div class="glance-block glance-learn" style="flex:0.8">🧩 Learning</div>
-        <div class="glance-block glance-outdoor" style="flex:0.8">🌳 Outdoor</div>
-        <div class="glance-block glance-meal" style="flex:0.8">🍽️ Lunch</div>
-        <div class="glance-block glance-rest" style="flex:2.5">😴 Nap / Rest</div>
-        <div class="glance-block glance-meal" style="flex:0.5">🍪 Snack</div>
-        <div class="glance-block glance-creative" style="flex:0.6">🎨 Art</div>
-        <div class="glance-block glance-play" style="flex:1">🏠 Free Play</div>
-        <div class="glance-block glance-learn" style="flex:0.6">📖 Story</div>
-        <div class="glance-block glance-pickup" style="flex:0.5">👋</div>
-      </div>
-      <div class="glance-times">
-        <span>9:00 AM</span>
-        <span>12:00 PM</span>
-        <span>3:00 PM</span>
-        <span>5:00 PM</span>
+    <div class="schedule-table-wrapper">
+      <div class="schedule-table-scroll">
+      <table class="schedule-age-table">
+        <thead>
+          <tr>
+            <th class="col-time">⏰ Time</th>
+            <th class="col-activity">📋 Activity</th>
+            <th><span class="age-label">👶</span><span class="age-range">14–24 months</span></th>
+            <th><span class="age-label">🧒</span><span class="age-range">2–3 years</span></th>
+            <th><span class="age-label">🎒</span><span class="age-range">3+ years</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-play">
+            <td class="td-time">9:00 – 9:20 AM</td>
+            <td class="td-activity"><span class="activity-icon">🏠</span> Arrival &amp; Free Play</td>
+            <td>Soft toys &amp; sensory play</td>
+            <td>Blocks &amp; pretend play</td>
+            <td>Cooperative play &amp; puzzles</td>
+          </tr>
+          <tr class="row-learn">
+            <td class="td-time">9:20 – 10:00 AM</td>
+            <td class="td-activity"><span class="activity-icon">📖</span> Circle Time</td>
+            <td>Songs &amp; actions</td>
+            <td>Colors &amp; simple concepts</td>
+            <td>Calendar, weather &amp; discussion</td>
+          </tr>
+          <tr class="row-meal">
+            <td class="td-time">10:00 – 10:30 AM</td>
+            <td class="td-activity"><span class="activity-icon">🍽️</span> Morning Snack</td>
+            <td>Encouraging self-feeding</td>
+            <td>Spoon/fork practice</td>
+            <td>Independent eating &amp; clean-up</td>
+          </tr>
+          <tr class="row-learn">
+            <td class="td-time">10:30 – 11:00 AM</td>
+            <td class="td-activity"><span class="activity-icon">🧩</span> Learning Centers</td>
+            <td>Stacking &amp; sensory play</td>
+            <td>Sorting &amp; fine motor</td>
+            <td>Pre-writing, STEM &amp; art centers</td>
+          </tr>
+          <tr class="row-outdoor">
+            <td class="td-time">11:00 – 11:30 AM</td>
+            <td class="td-activity"><span class="activity-icon">🌳</span> Outdoor Play</td>
+            <td>Walking &amp; push toys</td>
+            <td>Running games &amp; slides</td>
+            <td>Group games &amp; obstacle course</td>
+          </tr>
+          <tr class="row-hygiene">
+            <td class="td-time">11:30 – 11:45 AM</td>
+            <td class="td-activity"><span class="activity-icon">🧼</span> Hygiene &amp; Transition</td>
+            <td>Diaper change &amp; books</td>
+            <td>Restroom routine</td>
+            <td>Hand wash &amp; quiet reading</td>
+          </tr>
+          <tr class="row-meal">
+            <td class="td-time">11:45 AM – 12:30 PM</td>
+            <td class="td-activity"><span class="activity-icon">🍽️</span> Lunch</td>
+            <td>Encouraging self-feeding</td>
+            <td>Eating with guidance</td>
+            <td>Independent eating &amp; helping clean</td>
+          </tr>
+          <tr class="row-rest">
+            <td class="td-time">12:30 – 2:30 PM</td>
+            <td class="td-activity"><span class="activity-icon">😴</span> Nap / Rest</td>
+            <td>Nap</td>
+            <td>Nap or rest</td>
+            <td>Quiet rest with books &amp; quiet toys</td>
+          </tr>
+          <tr class="row-hygiene">
+            <td class="td-time">2:30 – 2:45 PM</td>
+            <td class="td-activity"><span class="activity-icon">🧼</span> Wake Up &amp; Care</td>
+            <td>Diaper change</td>
+            <td>Restroom</td>
+            <td>Restroom &amp; transition</td>
+          </tr>
+          <tr class="row-meal">
+            <td class="td-time">2:45 – 3:05 PM</td>
+            <td class="td-activity"><span class="activity-icon">🍪</span> Afternoon Snack</td>
+            <td>Self-feeding practice</td>
+            <td>Social snack time</td>
+            <td>Independent snack &amp; conversation</td>
+          </tr>
+          <tr class="row-creative">
+            <td class="td-time">3:05 – 3:30 PM</td>
+            <td class="td-activity"><span class="activity-icon">🎨</span> Art / Sensory</td>
+            <td>Simple crafts</td>
+            <td>Guided crafts</td>
+            <td>Creative projects</td>
+          </tr>
+          <tr class="row-play">
+            <td class="td-time">3:30 – 4:15 PM</td>
+            <td class="td-activity"><span class="activity-icon">🏠</span> Free Play</td>
+            <td>Exploration play</td>
+            <td>Pretend play</td>
+            <td>Social &amp; group play</td>
+          </tr>
+          <tr class="row-learn">
+            <td class="td-time">4:15 – 4:40 PM</td>
+            <td class="td-activity"><span class="activity-icon">📖</span> Story Time &amp; Music</td>
+            <td>Short stories</td>
+            <td>Interactive stories</td>
+            <td>Story discussion &amp; songs</td>
+          </tr>
+          <tr class="row-pickup">
+            <td class="td-time">4:40 – 5:00 PM</td>
+            <td class="td-activity"><span class="activity-icon">👋</span> Quiet Play &amp; Pick-Up</td>
+            <td>Books &amp; soft toys</td>
+            <td>Puzzles &amp; drawing</td>
+            <td>Calm activities</td>
+          </tr>
+        </tbody>
+      </table>
       </div>
     </div>
-
-    <div class="timeline">
-      <div class="timeline-item tl-play animate-in">
-        <div class="time">9:00 – 9:20 AM</div>
-        <div class="activity">🌅 Arrival &amp; Free Play — Soft toys &amp; sensory play (14–24 mo), blocks &amp; pretend play (2–3 yrs), cooperative play &amp; puzzles (3+ yrs).</div>
-      </div>
-      <div class="timeline-item tl-learn animate-in">
-        <div class="time">9:20 – 10:00 AM</div>
-        <div class="activity">📖 Circle Time — Songs &amp; actions (14–24 mo), colors &amp; simple concepts (2–3 yrs), calendar, weather &amp; discussion (3+ yrs).</div>
-      </div>
-      <div class="timeline-item tl-meal animate-in">
-        <div class="time">10:00 – 10:30 AM</div>
-        <div class="activity">🍽️ Morning Snack — Encouraging self-feeding (14–24 mo), spoon/fork practice (2–3 yrs), independent eating &amp; clean-up (3+ yrs).</div>
-      </div>
-      <div class="timeline-item tl-learn animate-in">
-        <div class="time">10:30 – 11:00 AM</div>
-        <div class="activity">🧩 Learning Centers / Activities — Stacking &amp; sensory play (14–24 mo), sorting &amp; fine motor (2–3 yrs), pre-writing, STEM &amp; art centers (3+ yrs).</div>
-      </div>
-      <div class="timeline-item tl-outdoor animate-in">
-        <div class="time">11:00 – 11:30 AM</div>
-        <div class="activity">🌳 Outdoor Play — Walking &amp; push toys (14–24 mo), running games &amp; slides (2–3 yrs), group games &amp; obstacle course (3+ yrs).</div>
-      </div>
-      <div class="timeline-item tl-hygiene animate-in">
-        <div class="time">11:30 – 12:00 PM</div>
-        <div class="activity">🧼 Diaper/Restroom &amp; Calm Transition — Diaper change &amp; books (14–24 mo), restroom routine (2–3 yrs), hand wash &amp; quiet reading (3+ yrs).</div>
-      </div>
-      <div class="timeline-item tl-meal animate-in">
-        <div class="time">12:00 – 12:30 PM</div>
-        <div class="activity">🍽️ Lunch Time — Encouraging self-feeding (14–24 mo), eating with guidance (2–3 yrs), independent eating &amp; helping clean (3+ yrs).</div>
-      </div>
-      <div class="timeline-item tl-rest animate-in">
-        <div class="time">12:30 – 2:30 PM</div>
-        <div class="activity">😴 Nap / Rest Time — Nap (14–24 mo), nap or rest (2–3 yrs), quiet rest with books &amp; quiet toys (3+ yrs).</div>
-      </div>
-      <div class="timeline-item tl-hygiene animate-in">
-        <div class="time">2:30 – 2:45 PM</div>
-        <div class="activity">🧼 Wake Up &amp; Care Routine — Diaper change (14–24 mo), restroom (2–3 yrs), restroom &amp; transition (3+ yrs).</div>
-      </div>
-      <div class="timeline-item tl-meal animate-in">
-        <div class="time">2:45 – 3:05 PM</div>
-        <div class="activity">🍪 Afternoon Snack — Self-feeding practice (14–24 mo), social snack time (2–3 yrs), independent snack &amp; conversation (3+ yrs).</div>
-      </div>
-      <div class="timeline-item tl-creative animate-in">
-        <div class="time">3:05 – 3:30 PM</div>
-        <div class="activity">🎨 Art / Sensory Activities — Simple crafts (14–24 mo), guided crafts (2–3 yrs), creative projects (3+ yrs).</div>
-      </div>
-      <div class="timeline-item tl-play animate-in">
-        <div class="time">3:30 – 4:15 PM</div>
-        <div class="activity">🏠 Free Play (Indoor/Outdoor) — Exploration play (14–24 mo), pretend play (2–3 yrs), social &amp; group play (3+ yrs).</div>
-      </div>
-      <div class="timeline-item tl-learn animate-in">
-        <div class="time">4:15 – 4:40 PM</div>
-        <div class="activity">📖 Story Time &amp; Music — Short stories (14–24 mo), interactive stories (2–3 yrs), story discussion &amp; songs (3+ yrs).</div>
-      </div>
-      <div class="timeline-item tl-pickup animate-in">
-        <div class="time">4:40 – 5:00 PM</div>
-        <div class="activity">👋 Quiet Play &amp; Pick-Up — Books &amp; soft toys (14–24 mo), puzzles &amp; drawing (2–3 yrs), calm activities (3+ yrs). Parents arrive by 5:00 PM.</div>
-      </div>
+    <div class="table-includes">
+      <strong>Includes:</strong>
+      <span class="includes-list">
+        <span class="includes-item">🍽️ Morning snack</span>
+        <span class="includes-item">🍽️ Lunch (packed)</span>
+        <span class="includes-item">😴 2-hour nap</span>
+        <span class="includes-item">🍪 PM snack</span>
+        <span class="includes-item">🌳 Outdoor play</span>
+        <span class="includes-item">🧩 Learning centers</span>
+        <span class="includes-item">🎨 Art &amp; sensory</span>
+        <span class="includes-item">📖 Story time</span>
+      </span>
     </div>
 
     <div style="text-align: center; margin-top: 30px;">
@@ -164,29 +221,8 @@
       <p>Our School Day program follows familiar school hours — perfect for families who want a full morning of learning plus an active afternoon, with pick-up before the end of the business day.</p>
     </div>
 
-    <!-- Day at a Glance -->
-    <div class="day-glance">
-      <h3 class="day-glance-title">School Day at a Glance</h3>
-      <div class="day-glance-bar">
-        <div class="glance-block glance-play" style="flex:0.5">🏠 Free Play</div>
-        <div class="glance-block glance-learn" style="flex:1">📖 Circle Time</div>
-        <div class="glance-block glance-meal" style="flex:0.8">🍽️ Snack</div>
-        <div class="glance-block glance-learn" style="flex:0.8">🧩 Learning</div>
-        <div class="glance-block glance-outdoor" style="flex:0.8">🌳 Outdoor</div>
-        <div class="glance-block glance-meal" style="flex:0.8">🍽️ Lunch</div>
-        <div class="glance-block glance-rest" style="flex:2.5">😴 Nap / Rest</div>
-        <div class="glance-block glance-meal" style="flex:0.5">🍪 Snack</div>
-        <div class="glance-block glance-creative" style="flex:0.6">🎨 Art</div>
-        <div class="glance-block glance-pickup" style="flex:0.4">👋</div>
-      </div>
-      <div class="glance-times">
-        <span>9:00 AM</span>
-        <span>12:00 PM</span>
-        <span>3:30 PM</span>
-      </div>
-    </div>
-
     <div class="schedule-table-wrapper">
+      <div class="schedule-table-scroll">
       <table class="schedule-age-table">
         <thead>
           <tr>
@@ -282,6 +318,18 @@
           </tr>
         </tbody>
       </table>
+      </div>
+    </div>
+    <div class="table-includes">
+      <strong>Includes:</strong>
+      <span class="includes-list">
+        <span class="includes-item">🍽️ Morning snack</span>
+        <span class="includes-item">🍽️ Lunch (packed)</span>
+        <span class="includes-item">😴 2-hour nap</span>
+        <span class="includes-item">🍪 PM snack</span>
+        <span class="includes-item">🌳 Outdoor play</span>
+        <span class="includes-item">🎨 Art &amp; sensory</span>
+      </span>
     </div>
 
     <div style="text-align: center; margin-top: 30px;">
@@ -304,6 +352,7 @@
     </div>
 
     <div class="schedule-table-wrapper">
+      <div class="schedule-table-scroll">
       <table class="schedule-age-table">
         <thead>
           <tr>
@@ -351,33 +400,45 @@
             <td>Group games &amp; obstacle course</td>
           </tr>
           <tr class="row-hygiene">
-            <td class="td-time">11:30 – 12:00 PM</td>
+            <td class="td-time">11:30 – 11:45 AM</td>
             <td class="td-activity"><span class="activity-icon">🧼</span> Hygiene &amp; Transition</td>
             <td>Diaper change &amp; books</td>
             <td>Restroom routine</td>
             <td>Hand wash &amp; quiet reading</td>
           </tr>
           <tr class="row-meal">
-            <td class="td-time">12:00 – 12:30 PM</td>
+            <td class="td-time">11:45 AM – 12:30 PM</td>
             <td class="td-activity"><span class="activity-icon">🍽️</span> Lunch</td>
             <td>Encouraging self-feeding</td>
             <td>Eating with guidance</td>
             <td>Independent eating &amp; helping clean</td>
           </tr>
           <tr class="row-rest">
-            <td class="td-time">12:30 – 1:15 PM</td>
+            <td class="td-time">12:30 – 1:30 PM</td>
             <td class="td-activity"><span class="activity-icon">😴</span> Nap / Rest</td>
             <td>Nap</td>
             <td>Nap or rest</td>
             <td>Quiet rest with books</td>
           </tr>
           <tr class="row-pickup">
-            <td class="td-time">1:15 PM</td>
+            <td class="td-time">1:30 PM</td>
             <td class="td-activity"><span class="activity-icon">👋</span> Pick-Up</td>
             <td colspan="3" style="text-align:center;">Ready for Pick-Up — See you tomorrow!</td>
           </tr>
         </tbody>
       </table>
+      </div>
+    </div>
+    <div class="table-includes">
+      <strong>Includes:</strong>
+      <span class="includes-list">
+        <span class="includes-item">🍽️ Morning snack</span>
+        <span class="includes-item">🍽️ Lunch (packed)</span>
+        <span class="includes-item">😴 1-hour nap</span>
+        <span class="includes-item">🌳 Outdoor play</span>
+        <span class="includes-item">🧩 Learning centers</span>
+        <span class="includes-item">📖 Circle time</span>
+      </span>
     </div>
 
     <div class="highlight-box" style="margin-top: 30px;">
