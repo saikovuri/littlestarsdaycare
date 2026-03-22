@@ -1325,17 +1325,19 @@ nav a.active {
   .schedule-table-wrapper {
     box-shadow: none;
     border-radius: 0;
+    overflow: visible;
   }
 
   .schedule-table-scroll {
     max-height: none;
-    overflow-y: visible;
+    overflow: visible;
     border-radius: 0;
   }
 
   .schedule-age-table {
     border-collapse: separate;
     border-spacing: 0;
+    display: block;
   }
 
   .schedule-age-table thead {
@@ -1346,6 +1348,7 @@ nav a.active {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    width: 100%;
   }
 
   .schedule-age-table tbody tr {
