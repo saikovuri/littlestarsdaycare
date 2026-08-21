@@ -67,6 +67,24 @@ window.addEventListener('scroll', function () {
   });
 })();
 
+// ===== Expandable Testimonials =====
+(function () {
+  var toggles = document.querySelectorAll('.testimonial-toggle');
+  if (!toggles.length) return;
+
+  toggles.forEach(function (toggle) {
+    toggle.addEventListener('click', function () {
+      var review = document.getElementById(this.getAttribute('aria-controls'));
+      if (!review) return;
+
+      var isExpanded = this.getAttribute('aria-expanded') === 'true';
+      review.classList.toggle('is-collapsed', isExpanded);
+      this.setAttribute('aria-expanded', String(!isExpanded));
+      this.textContent = isExpanded ? 'Read full review' : 'Show less';
+    });
+  });
+})();
+
 // ===== Scroll-triggered animations (IntersectionObserver) =====
 (function () {
   var items = document.querySelectorAll('.animate-in');
