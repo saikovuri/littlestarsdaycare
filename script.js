@@ -1,3 +1,8 @@
+// Footer copyright year
+document.querySelectorAll('.current-year').forEach(function (el) {
+  el.textContent = new Date().getFullYear();
+});
+
 // Mobile nav toggle
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('nav');
